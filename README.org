@@ -1,0 +1,27 @@
+* Cl-Yolo 
+
+Manipulate [[https://arxiv.org/pdf/1506.02640.pdf][YOLO]] tagged data in common lisp.
+
+YOLO is /You Only Look Once: Unified, Real-Time Object Detection/.  Basically, detected objects are given a bounding box.
+
+** Usage
+
+** Installation
+
+** Some specifics
+
+*** Labels
+The following description of the labels comes from [[https://towardsdatascience.com/yolo-v5-object-detection-tutorial-2e607b9013ef][this tutorial]]:
+
+  #+begin_quote
+  The bounding boxes have to be listed as one bounding box per line, with on that line:
+  - the class number of the object in the bounding box (always 0 if only one class)
+  - the standardized center pixel of the bounding box in terms of width
+  - the standardized center pixel of the bounding box in terms of height
+  - the standardized width of the bounding box
+  - the standardized height of the bounding box
+
+  Standardization is done by dividing the number of pixels by the total number of pixels of the image. So a bounding box on pixel (10, 20) with a width of 30x40 on a picture of size (100, 100) would be standardized to (0.1, 0.2, 0.3, 0.4).
+
+  The number of lines of the label file is the number of bounding boxes in one image. The number of label files is the number of images.
+  #+end_quote
